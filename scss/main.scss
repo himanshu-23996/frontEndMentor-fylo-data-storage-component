@@ -1,0 +1,183 @@
+@import './reset';
+@import './config';
+body {
+    // Screen Sizing
+    min-width: 830px;
+    width: 100vw;
+    height: 100vh;
+    // Alloting Background
+    background: url("/images/bg-desktop.png"), $very-dark-blue, ;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // background-size: contain;
+    // Centering Content
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
+    grid-template-areas: " card-1 card-2 ";
+    grid-column-gap: 2em;
+}
+
+.logo-holder {
+    padding: 1.5em;
+    grid-area: card-1;
+    background-color: $dark-blue;
+    border-radius: 15px;
+    border-top-right-radius: 45%;
+    color: white;
+    .logo-image {
+        margin-top: 1em;
+    }
+    .icon-container {
+        margin-top: 2em;
+        img {
+            background-color: $very-dark-blue;
+            width: 3em;
+            height: 3em;
+            padding: 0.8em;
+            border-radius: 10px;
+            margin-right: 1em;
+        }
+    }
+}
+
+.storage-indicator {
+    padding: 2.5em;
+    grid-area: card-2;
+    background-color: $dark-blue;
+    border-radius: 15px;
+    color: white;
+    margin-top: 3.5em;
+    .display-text {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        font-size: 0.9rem;
+        span {
+            font-weight: 400;
+        }
+    }
+    .visualiser {
+        margin-top: 5%;
+        width: 100%;
+        border-radius: 10px;
+        height: 1em;
+        background-color: $very-dark-blue;
+        padding: 0.05em;
+        .bar-body {
+            background-image: $bar-gradient;
+            border-radius: inherit;
+            width: 81.5%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .bar-head {
+                border-radius: inherit;
+                background-color: white;
+                width: 0.5em;
+                height: 0.5em;
+                margin-right: 0.15em;
+            }
+        }
+    }
+    .storage-num {
+        margin-top: 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .num {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        // Screen Sizing
+        min-width: unset;
+        width: 100vw;
+        height: 100vh;
+        // Alloting Background
+        background: url("/images/bg-mobile.png"), $very-dark-blue, ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // Centering Content
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: grid;
+        place-content: center;
+        grid-template-columns: unset;
+        grid-template-rows: (100px, 1fr) minmax(200px, 1.5fr);
+        grid-template-areas: " card-1 " " card-2 ";
+        grid-column-gap: unset;
+        grid-row-gap: 2em;
+    }
+    .storage-indicator {
+        padding: 2.5em;
+        grid-area: card-2;
+        background-color: $dark-blue;
+        border-radius: 15px;
+        color: white;
+        margin-top: 0em;
+        .display-text {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            font-size: 0.9rem;
+            span {
+                font-weight: 400;
+            }
+        }
+        .visualiser {
+            margin-top: 5%;
+            width: 100%;
+            border-radius: 10px;
+            height: 1em;
+            background-color: $very-dark-blue;
+            padding: 0.05em;
+            .bar-body {
+                background-image: $bar-gradient;
+                border-radius: inherit;
+                width: 81.5%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .bar-head {
+                    border-radius: inherit;
+                    background-color: white;
+                    width: 0.5em;
+                    height: 0.5em;
+                    margin-right: 0.15em;
+                }
+            }
+        }
+        .storage-num {
+            margin-top: 0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .num {
+                font-family: 'Raleway', sans-serif;
+                color: white;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+        }
+    }
+}
