@@ -8,8 +8,7 @@ body {
     background-color: $very-dark-blue;
     background-image: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    background-size: contain;
     // Centering Content
     @include center-contents;
 }
