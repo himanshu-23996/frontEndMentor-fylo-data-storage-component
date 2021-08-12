@@ -5,7 +5,7 @@ body {
     min-width: 830px;
     @include sizing-wd_by_ht(100vw, 100vh);
     // Alloting Background
-    background-image: url("./images/bg-desktop.png");
+    background-image: url(../images/bg-desktop.png);
     background-color: $very-dark-blue;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -15,8 +15,7 @@ body {
 }
 
 .container {
-    @include sizing-wd_by_ht(80%,
-    auto);
+    @include sizing-wd_by_ht(80%, auto);
     display: grid;
     place-content: center;
     grid-template-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
@@ -36,8 +35,7 @@ body {
         img {
             margin-right: 1em;
             @include create-card($bgColor: $very-dark-blue, $pad: 0.8em, $bdr-rad: 10px);
-            @include sizing-wd_by_ht(3em,
-            3em);
+            @include sizing-wd_by_ht(3em, 3em);
         }
     }
 }
@@ -55,19 +53,16 @@ body {
     .visualiser {
         margin-top: 5%;
         @include create-card($bgColor: $very-dark-blue, $pad: 0.05em, $bdr-rad: 10px);
-        @include sizing-wd_by_ht(100%,
-        1em);
+        @include sizing-wd_by_ht(100%, 1em);
         .bar-body {
             @include create-card($bgColor: $bar-gradient, $pad: 0px, $bdr-rad: inherit);
-            @include sizing-wd_by_ht(81.5%,
-            100%);
+            @include sizing-wd_by_ht(81.5%, 100%);
             display: flex;
             justify-content: flex-end;
             align-items: center;
             .bar-head {
                 @include create-card($bgColor: white, $pad: 0em, $bdr-rad: inherit);
-                @include sizing-wd_by_ht(1em,
-                1em);
+                @include sizing-wd_by_ht(1em, 1em);
             }
         }
     }
@@ -77,9 +72,7 @@ body {
     @include create-card($bgColor: white, $pad: 1em, $bdr-rad: 10px);
     padding-inline: 1.5em;
     border: 1px solid black;
-    @include page-fonts($weight,
-    $size,
-    $font-color: $grayish-blue);
+    @include page-fonts($weight, $size, $font-color: $grayish-blue);
     span {
         @include page-fonts($weight: 700, $size: 2rem, $font-color: black);
     }
@@ -90,7 +83,7 @@ body {
         // Screen Sizing
         min-width: unset;
         // Alloting Background
-        background-image: url("./images/bg-mobile.png");
+        background-image: url(../images/bg-mobile.png);
         background-color: $very-dark-blue;
         background-position: center;
     }
