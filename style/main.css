@@ -76,7 +76,6 @@ body {
   grid-area: card-2;
   background-color: #1d2c67;
   border-radius: 15px;
-  color: white;
   margin-top: 3.5em;
 }
 
@@ -84,6 +83,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   font-size: 0.9rem;
+  color: white;
 }
 
 .storage-indicator .display-text span {
@@ -142,6 +142,22 @@ body {
   color: white;
   font-weight: 400;
   font-size: 1rem;
+}
+
+.left-storage-indicator {
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  padding-inline: 1.5em;
+  padding-block: 1em;
+  background-color: white;
+  color: #848794;
+}
+
+.left-storage-indicator span {
+  font-family: inherit;
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 @media (max-width: 800px) {
