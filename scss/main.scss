@@ -5,8 +5,8 @@ body {
     min-width: 830px;
     @include sizing-wd_by_ht(100vw, 100vh);
     // Alloting Background
-    background-image: url("../images/bg-desktop.png");
     background-color: $very-dark-blue;
+    background-image: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
