@@ -2,226 +2,104 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  min-width: 830px;
-  width: 100vw;
-  height: 100vh;
-  background: url("/images/bg-desktop.png"), #0c122c;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container {
-  width: 80%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  -ms-grid-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
-      grid-template-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
-      grid-template-areas: " card-1 card-2 ";
-  grid-column-gap: 2em;
-}
-
-.logo-holder {
-  padding: 1.5em;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: card-1;
-  background-color: #1d2c67;
-  border-radius: 15px;
-  border-top-right-radius: 45%;
-  color: white;
-}
-
-.logo-holder .logo-image {
-  margin-top: 1em;
-}
-
-.logo-holder .icon-container {
-  margin-top: 2em;
-}
-
-.logo-holder .icon-container img {
-  background-color: #0c122c;
-  width: 3em;
-  height: 3em;
-  padding: 0.8em;
-  border-radius: 10px;
-  margin-right: 1em;
-}
-
-.storage-indicator {
-  padding: 2.5em;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: card-2;
-  background-color: #1d2c67;
-  border-radius: 15px;
-  margin-top: 3.5em;
-}
-
-.storage-indicator .display-text {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  font-size: 0.9rem;
-  color: white;
-}
-
-.storage-indicator .display-text span {
-  font-weight: 400;
-}
-
-.storage-indicator .visualiser {
-  margin-top: 5%;
-  width: 100%;
-  border-radius: 10px;
-  height: 1em;
-  background-color: #0c122c;
-  padding: 0.05em;
-}
-
-.storage-indicator .visualiser .bar-body {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
-  background-image: linear-gradient(90deg, #ffa399, #ff4d97);
-  border-radius: inherit;
-  width: 81.5%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.storage-indicator .visualiser .bar-body .bar-head {
-  border-radius: inherit;
-  background-color: white;
-  width: 0.5em;
-  height: 0.5em;
-  margin-right: 0.15em;
-}
-
-.storage-indicator .storage-num {
-  margin-top: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.storage-indicator .storage-num .num {
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.left-storage-indicator {
-  font-family: 'Raleway', sans-serif;
-  border-radius: 10px;
-  padding-inline: 1.5em;
-  padding-block: 1em;
-  background-color: white;
-  color: #848794;
-}
-
-.left-storage-indicator span {
-  font-family: inherit;
-  color: black;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-@media (max-width: 800px) {
-  body {
-    min-width: unset;
+    min-width: 830px;
     width: 100vw;
     height: 100vh;
-    background: url("/images/bg-mobile.png"), #0c122c;
+    background: url("../images/bg-desktop.png"), #0c122c;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .container {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
     display: -ms-grid;
     display: grid;
     place-content: center;
-    -ms-grid-columns: unset;
-        grid-template-columns: unset;
-    -ms-grid-rows: 100px, 1fr minmax(200px, 1.5fr);
-        grid-template-rows: 100px, 1fr minmax(200px, 1.5fr);
-        grid-template-areas: " card-1 " " card-2 ";
-    grid-column-gap: unset;
-    grid-row-gap: 2em;
-  }
-  .storage-indicator {
-    padding: 2.5em;
-    -ms-grid-row: 2;
+    -ms-grid-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
+    grid-template-columns: minmax(100px, 1fr) minmax(200px, 1.5fr);
+    grid-template-areas: " card-1 card-2 ";
+    grid-column-gap: 2em;
+}
+
+.logo-holder {
+    padding: 1.5em;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
+    grid-area: card-1;
+    background-color: #1d2c67;
+    border-radius: 15px;
+    border-top-right-radius: 45%;
+    color: white;
+}
+
+.logo-holder .logo-image {
+    margin-top: 1em;
+}
+
+.logo-holder .icon-container {
+    margin-top: 2em;
+}
+
+.logo-holder .icon-container img {
+    background-color: #0c122c;
+    width: 3em;
+    height: 3em;
+    padding: 0.8em;
+    border-radius: 10px;
+    margin-right: 1em;
+}
+
+.storage-indicator {
+    padding: 2.5em;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: card-2;
     background-color: #1d2c67;
     border-radius: 15px;
-    color: white;
-    margin-top: 0em;
-  }
-  .storage-indicator .display-text {
+    margin-top: 3.5em;
+}
+
+.storage-indicator .display-text {
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-size: 0.9rem;
-  }
-  .storage-indicator .display-text span {
+    color: white;
+}
+
+.storage-indicator .display-text span {
     font-weight: 400;
-  }
-  .storage-indicator .visualiser {
+}
+
+.storage-indicator .visualiser {
     margin-top: 5%;
     width: 100%;
     border-radius: 10px;
     height: 1em;
     background-color: #0c122c;
     padding: 0.05em;
-  }
-  .storage-indicator .visualiser .bar-body {
+}
+
+.storage-indicator .visualiser .bar-body {
     background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
     background-image: linear-gradient(90deg, #ffa399, #ff4d97);
     border-radius: inherit;
@@ -231,35 +109,157 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .storage-indicator .visualiser .bar-body .bar-head {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.storage-indicator .visualiser .bar-body .bar-head {
     border-radius: inherit;
     background-color: white;
     width: 0.5em;
     height: 0.5em;
     margin-right: 0.15em;
-  }
-  .storage-indicator .storage-num {
+}
+
+.storage-indicator .storage-num {
     margin-top: 0.5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .storage-indicator .storage-num .num {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.storage-indicator .storage-num .num {
     font-family: 'Raleway', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 1rem;
-  }
+}
+
+.left-storage-indicator {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    padding-inline: 1.5em;
+    padding-block: 1em;
+    background-color: white;
+    color: #848794;
+}
+
+.left-storage-indicator span {
+    font-family: inherit;
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+    body {
+        min-width: unset;
+        width: 100vw;
+        height: 100vh;
+        background: url("../images/bg-mobile.png"), #0c122c;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .container {
+        display: -ms-grid;
+        display: grid;
+        place-content: center;
+        -ms-grid-columns: unset;
+        grid-template-columns: unset;
+        -ms-grid-rows: 100px, 1fr minmax(200px, 1.5fr);
+        grid-template-rows: 100px, 1fr minmax(200px, 1.5fr);
+        grid-template-areas: " card-1 " " card-2 ";
+        grid-column-gap: unset;
+        grid-row-gap: 2em;
+    }
+    .storage-indicator {
+        padding: 2.5em;
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: card-2;
+        background-color: #1d2c67;
+        border-radius: 15px;
+        color: white;
+        margin-top: 0em;
+    }
+    .storage-indicator .display-text {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        font-size: 0.9rem;
+    }
+    .storage-indicator .display-text span {
+        font-weight: 400;
+    }
+    .storage-indicator .visualiser {
+        margin-top: 5%;
+        width: 100%;
+        border-radius: 10px;
+        height: 1em;
+        background-color: #0c122c;
+        padding: 0.05em;
+    }
+    .storage-indicator .visualiser .bar-body {
+        background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+        background-image: linear-gradient(90deg, #ffa399, #ff4d97);
+        border-radius: inherit;
+        width: 81.5%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .storage-indicator .visualiser .bar-body .bar-head {
+        border-radius: inherit;
+        background-color: white;
+        width: 0.5em;
+        height: 0.5em;
+        margin-right: 0.15em;
+    }
+    .storage-indicator .storage-num {
+        margin-top: 0.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .storage-indicator .storage-num .num {
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        font-weight: 400;
+        font-size: 1rem;
+    }
 }
