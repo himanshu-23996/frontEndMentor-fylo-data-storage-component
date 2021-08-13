@@ -29,6 +29,7 @@ main {
 }
 
 .logo-holder {
+    height: 80%;
     grid-area: card-1;
     @include create-card($bgColor: $dark-blue, $pad: 1.5em, $bdr-rad: 15px);
     border-top-right-radius: 45%;
@@ -47,6 +48,7 @@ main {
 }
 
 .storage-indicator {
+    height: 61%;
     grid-area: card-2;
     margin-top: 3.5em;
     @include create-card($bgColor: $dark-blue, $pad: 2.5em, $bdr-rad: 15px);
@@ -95,12 +97,12 @@ main {
         }
         position: relative;
         align-self: flex-end;
-        top: -110%;
+        top: -180%;
         width: fit-content;
         &::after {
             position: absolute;
             content: "";
-            bottom: -50%;
+            bottom: -30%;
             right: -0.5%;
             border: 1px solid black;
             background-color: white;
@@ -120,7 +122,7 @@ main {
         @include center-contents;
     }
     main {
-        @include sizing-wd_by_ht(100%,
+        @include sizing-wd_by_ht(100vw,
         100vh);
         @include center-contents;
         background-image: url("../images/bg-mobile.png");
@@ -135,7 +137,11 @@ main {
         grid-column-gap: unset;
         grid-row-gap: 2em;
     }
+    .logo-holder {
+        height: unset;
+    }
     .storage-indicator {
+        height: 75%;
         margin-top: 0em;
         .left-storage-indicator {
             @include create-card($bgColor: white, $pad: 1em, $bdr-rad: 10px);
@@ -146,7 +152,7 @@ main {
                 @include page-fonts($weight: 700, $size: 2rem, $font-color: black);
             }
             top: unset;
-            bottom: -50%;
+            bottom: -25%;
             align-self: center;
             &::after {
                 all: unset;
