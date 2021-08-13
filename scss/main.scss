@@ -14,6 +14,17 @@ body {
     @include center-contents;
 }
 
+main {
+    // Screen Sizing
+    min-width: 830px;
+    @include sizing-wd_by_ht(100vw,
+    100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     @include sizing-wd_by_ht(80%,
     auto);
