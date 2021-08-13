@@ -12,11 +12,6 @@ body {
   min-width: 830px;
   width: 100vw;
   height: 100vh;
-  background-color: #0c122c;
-  background-image: url("../images/bg-desktop.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +31,11 @@ main {
   min-width: 830px;
   width: 100vw;
   height: 100vh;
+  background-color: #0c122c;
+  background-image: url("../images/bg-desktop.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,12 +43,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {
@@ -197,12 +197,59 @@ main {
   color: black;
 }
 
+.storage-indicator .left-storage-indicator::after {
+  position: absolute;
+  content: "";
+  bottom: -50%;
+  right: -0.5%;
+  border: 1px solid black;
+  background-color: white;
+  -webkit-clip-path: polygon(46% 0, 100% 100%, 100% 0);
+          clip-path: polygon(46% 0, 100% 100%, 100% 0);
+  width: 30%;
+  height: 60%;
+  border-top: unset;
+}
+
 @media (max-width: 800px) {
   body {
-    min-width: unset;
+    all: unset;
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-image: url("../images/bg-mobile.png");
-    background-color: #0c122c;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .container {
     -ms-grid-columns: unset;
@@ -237,5 +284,8 @@ main {
     font-weight: 700;
     font-size: 2rem;
     color: black;
+  }
+  .storage-indicator .left-storage-indicator::after {
+    all: unset;
   }
 }
