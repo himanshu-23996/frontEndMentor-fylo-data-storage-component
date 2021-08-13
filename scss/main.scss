@@ -7,6 +7,7 @@ body {
     // Alloting Background
     background-color: $very-dark-blue;
     background-image: url("../images/bg-desktop.png");
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
     // Centering Content
@@ -50,6 +51,7 @@ body {
         span {
             font-weight: 400;
         }
+        letter-spacing: 0.1em;
     }
     .visualiser {
         margin-top: 5%;
@@ -70,17 +72,27 @@ body {
             }
         }
     }
-}
-
-.left-storage-indicator {
-    @include create-card($bgColor: white, $pad: 1em, $bdr-rad: 10px);
-    padding-inline: 1.5em;
-    border: 1px solid black;
-    @include page-fonts($weight,
-    $size,
-    $font-color: $grayish-blue);
-    span {
-        @include page-fonts($weight: 700, $size: 2rem, $font-color: black);
+    .storage-num {
+        padding-top: 1em;
+        @include page-fonts($weight: 400, $size: 1rem, $font-color: white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    display: flex;
+    flex-direction: column;
+    .left-storage-indicator {
+        @include create-card($bgColor: white, $pad: 1em, $bdr-rad: 10px);
+        padding-inline: 1.5em;
+        border: 1px solid black;
+        @include page-fonts($weight: 400, $size: 1rem, $font-color: $grayish-blue);
+        span {
+            @include page-fonts($weight: 700, $size: 2rem, $font-color: black);
+        }
+        position: relative;
+        align-self: flex-end;
+        top: -110%;
+        width: fit-content;
     }
 }
 
@@ -102,5 +114,17 @@ body {
     }
     .storage-indicator {
         margin-top: 0em;
+        .left-storage-indicator {
+            @include create-card($bgColor: white, $pad: 1em, $bdr-rad: 10px);
+            padding-inline: 1.5em;
+            border: 1px solid black;
+            @include page-fonts($weight: 400, $size: 1rem, $font-color: $grayish-blue);
+            span {
+                @include page-fonts($weight: 700, $size: 2rem, $font-color: black);
+            }
+            top: unset;
+            bottom: -50%;
+            align-self: center;
+        }
     }
 }
