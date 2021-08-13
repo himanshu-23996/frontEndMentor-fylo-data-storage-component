@@ -7,6 +7,7 @@
   
 ### New topics learnt: 
   -> Overlapping items using position:relative,top & left. AND overlapping using CSS grid.
+  -> Using pseudo elements, clip path & background-color to create arbritary shapes.
 
 
 ### Need to work on: 
